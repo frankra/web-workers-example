@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/app/js/ServiceWorker.js', {scope: '/app/js/ServiceWorker'})
+      .then(function(reg) {
+        // registration worked
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+      }).catch(function(error) {
+        // registration failed
+        console.log('Registration failed with ' + error);
+      });
+    }
+    </script>
+    <style>
+      .bg {
+        background-image: url('/app/images/bg.jpg');
+      }
+    </style>
+  </head>
+  <body class="bg">
+  </body>
+</html>
